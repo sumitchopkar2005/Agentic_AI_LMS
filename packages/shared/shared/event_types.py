@@ -1,0 +1,11 @@
+"""Event type constants shared across packages."""
+
+INGESTION_STARTED = "ingestion.started"
+INGESTION_COMPLETED = "ingestion.completed"
+ASSIGNMENT_GENERATED = "assignment.generated"
+ASSIGNMENT_PUBLISHED = "assignment.published"
+SUBMISSION_RECEIVED = "submission.received"
+GRADE_AWARDED = "grade.awarded"
+HINT_ACCESSED = "hint.accessed"
+STREAK_UPDATED = "streak.updated"
+BADGE_EARNED = "badge.earned"

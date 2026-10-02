@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env.local
+.env.*.local
+
+# Build outputs
+.next/
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Turbo
+.turbo/
+
+# MinIO data
+minio-data/
+
+# Certificates / TLS keys
+certs/
+apps/web/certificates/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Alembic
+apps/api/alembic/versions/__pycache__/

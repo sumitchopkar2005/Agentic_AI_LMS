@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-surface-border;
+  }
+
+  body {
+    @apply bg-surface text-text-primary antialiased;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2b4d;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3b6d;
+  }
+}
+
+@layer components {
+  /* Category labels — uppercase, letter-spaced, muted */
+  .label-overline {
+    @apply text-[11px] font-semibold uppercase tracking-[0.2em] text-text-faint;
+  }
+
+  /* Section headers */
+  .heading-section {
+    @apply text-2xl font-bold text-text-primary tracking-tight;
+  }
+
+  /* Card base */
+  .card {
+    @apply rounded-xl border border-surface-border bg-surface-raised p-6 transition-all duration-200;
+  }
+  .card-hover:hover {
+    @apply border-accent-blue/40 shadow-lg shadow-accent-blue/5;
+  }
+
+  /* Insight / callout boxes inspired by reference */
+  .callout {
+    @apply rounded-lg border border-surface-border bg-gradient-card p-5
+           border-l-4 border-l-accent-blue;
+  }
+  .callout-warning {
+    @apply callout border-l-gold;
+  }
+  .callout-success {
+    @apply callout border-l-success;
+  }
+  .callout-danger {
+    @apply callout border-l-danger;
+  }
+
+  /* Gradient CTA button */
+  .btn-primary {
+    @apply rounded-lg bg-gradient-brand px-6 py-2.5 text-sm font-bold
+           text-text-inverted tracking-wide transition-all duration-200
+           hover:shadow-lg hover:shadow-accent-blue/20 hover:brightness-110
+           active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply rounded-lg border border-surface-border bg-surface-raised
+           px-6 py-2.5 text-sm font-medium text-text-secondary
+           transition-all duration-200
+           hover:border-accent-blue/40 hover:text-text-primary;
+  }
+  .btn-ghost {
+    @apply rounded-lg px-4 py-2 text-sm text-text-muted
+           transition-all duration-200 hover:bg-surface-raised hover:text-text-primary;
+  }
+
+  /* Nav item with active indicator */
+  .nav-item {
+    @apply flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm
+           text-text-muted transition-all duration-200
+           hover:bg-surface-raised hover:text-text-primary;
+  }
+  .nav-item-active {
+    @apply nav-item bg-surface-raised text-accent-blue font-semibold
+           border-r-2 border-r-accent-blue;
+  }
+
+  /* Progress bar with gradient fill */
+  .progress-track {
+    @apply h-1.5 w-full rounded-full bg-surface-overlay overflow-hidden;
+  }
+  .progress-fill {
+    @apply h-full rounded-full bg-gradient-brand transition-all duration-500 ease-out;
+  }
+
+  /* Stat pill — for XP, Gold, Streak in headers */
+  .stat-pill {
+    @apply flex items-center gap-2 rounded-full bg-surface-raised
+           border border-surface-border px-4 py-1.5 text-sm font-semibold;
+  }
+
+  /* Glass effect for overlays */
+  .glass {
+    @apply bg-surface/80 backdrop-blur-xl border border-surface-border;
+  }
+
+  /* Code block styling (for tutor responses etc.) */
+  .code-block {
+    @apply rounded-lg bg-[#1a1b26] border border-surface-border
+           p-5 font-mono text-sm leading-relaxed text-text-secondary
+           overflow-x-auto;
+  }
+}
